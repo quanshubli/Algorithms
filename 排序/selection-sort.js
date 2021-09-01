@@ -1,6 +1,8 @@
+const { capitalLetters } = require('./example')
+
 /**
  * 选择排序
- * @param {array}} list 
+ * @param {array} list 
  */
 function selectionSort(list) {
   const result = []
@@ -25,6 +27,5 @@ function selectionSort(list) {
 }
 
 // 用例
-// const list = ['S', 'O', 'R', 'T', 'E', 'X', 'A', 'M', 'P', 'L', 'E']
-// const result = selectionSort(list)
+// const result = selectionSort(capitalLetters)
 // console.log(result)
