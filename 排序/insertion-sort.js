@@ -9,12 +9,19 @@ function insertionSort(list) {
   const result = []
 
   copyList.forEach(a => {
-    const index = result.findIndex(b => a <= b)
+    let i = result.length - 1
 
-    if (index !== -1) {
-      result.splice(index, 0, a)
-    } else {
-      result.push(a)
+    while (i >= 0) {
+      if (a >= result[i]) {
+        result.splice(i + 1, 0, a)
+        break
+      } else {
+        i--
+      }
+    }
+
+    if (i < 0) {
+      result.unshift(a)
     }
   })
 
